@@ -111,11 +111,19 @@ body {
     margin: 50px;
 }
 
+#project {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 10px #808080;
+    /*border-radius: 20px;*/
+}
+
 #divBgWhite {
     background-color: white;
     padding: 25px;
     margin-bottom: 40px;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
     box-shadow: 2px 2px 10px #808080;
 }
 
@@ -166,14 +174,6 @@ p {
     text-decoration: none;
 }
 
-#project {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 40px;
-    box-shadow: 2px 2px 10px #808080;
-    border-radius: 20px;
-}
-
 #regular_list {
     font-family: 'Open Sans', sans-serif;
 }
@@ -192,7 +192,7 @@ footer {
 }
 
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 826px) {
     .horizontalNav {
         margin: 0;
         background-color: #000000;
@@ -204,7 +204,17 @@ footer {
         box-shadow: 2px 2px 10px #000000;
         z-index: 9999;
     }
-
+    
+    .horizontalNav li {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    vertical-align: central;
+    float: right;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    }
+    
     #title {
         background-color: #234178;
         padding: 30px;
