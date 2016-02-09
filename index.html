@@ -5,17 +5,19 @@
     <link href="styles/style.css" rel="stylesheet" />
     <title>Daniel P Fernandes | Portfolio | Resumé</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" /> 
 </head>
 <body>
     <header id="title" style="font-size:xx-large; text-align:center; color:white">
+        <br />
         <img src="img/avatar.png" />
         <h1 style="font-size:xx-large">Daniel Paiva Fernandes</h1>
     </header>
 
     <nav>
-        <ul id="horizontalNav">
-            <li><a href="#Portfolio">Portfolio</a></li>
-            <li><a href="#Resume">Resumé</a></li>
+        <ul class="horizontalNav">
+            <li><a href="#Portfolio">PORTFOLIO</a></li>
+            <li><a href="#Resume">RESUMÉ</a></li>
             <ul style="float:right;list-style-type:none; margin-right:0; padding:0">
                 <li><a href="https://github.com/danielpfernandes" target="_blank"><img src="img/github.png" alt="GitHub" /></a></li>
                 <li><a href="https://www.linkedin.com/in/paivafernandes" target="_blank"><img src="img/linkedin.png" alt="LinkeDin" /></a></li>
@@ -72,21 +74,25 @@
                     implemented on Unity
                     Product available for free on Amazon Apptore for Android devices and Windows Store.
                 </p>
-                <div style="text-align:center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iuvL-6pS_Zk"
-                            frameborder="0" allowfullscreen id="I1" name="I1" style="box-shadow:2px 2px 10px #808080"></iframe>
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/iuvL-6pS_Zk"
+                            allowfullscreen width="640" height="352" frameborder="0"
+                            style="box-shadow:2px 2px 10px #808080">
+                    
+                    </iframe>
                 </div>
             </div>
-            <div id="project" style="background-color:#e6e6e6">
+            <div id="project">
                 <h2>BRICK BREAKER RELOAD | Game | Github Source</h2>
                 <p style="font-style:italic">Oct 2015 – Nov 2015</p>
                 <p>
                     Project developed for Interactive Game Development Course, oriented
                     by Prof. Dr. Micheal Olan, using Unity Engine.
                 </p>
-                <div style="text-align:center"><img src="img/brickbreaker.png" style="box-shadow:2px 2px 10px #808080" /></div>
+                <div style="text-align:center"><img class="img_responsive" src="img/brickbreaker.png" 
+                                                    style="box-shadow:2px 2px 10px #808080" /></div>
             </div>
-            <div id="project" style="background-color:#d9d9d9">
+            <div id="project">
                 <h2>INTELLIGENT ELEVATOR MANAGEMENT USING FUZZY LOGIC</h2>
                 <p style="font-style:italic">Apr 2015 - Jul 2015</p>
                 <p>
@@ -104,7 +110,7 @@
                     with a database to the project. The DBMS adopted was PostegreSQL, version 9.3.
                 </p>
             </div>
-            <div id="project" style="background-color:#cccccc">
+            <div id="project">
                 <h2>CONTA PRAZOS | Github Source</h2>
                 <p style="font-style:italic">Jun 2014 - Set 2014</p>
                 <p>
@@ -113,17 +119,17 @@
                     procedural deadlines for legal professionals. The project was implemented
                     for Android using ADT in Eclipse IDE, and versioning controlled by GitHub.
                 </p>
-                <div style="text-align:center">
+                <div class="videowrapper">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/xQYP_ugMjw4"
-                            frameborder="0" allowfullscreen id="I1" name="I1" style="box-shadow:2px 2px 10px #808080"></iframe>
+                            frameborder="0" allowfullscreen style="box-shadow:2px 2px 10px #808080"></iframe>
                 </div>
                 <br />
-                <div style="text-align:center">
+                <div class="videowrapper">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/yYOI7IgSrTM"
-                            frameborder="0" allowfullscreen id="I1" name="I1" style="box-shadow:2px 2px 10px #808080"></iframe>
+                            frameborder="0" allowfullscreen style="box-shadow:2px 2px 10px #808080"></iframe>
                 </div>
             </div>
-            <div id="project" style="background-color:#bfbfbf">
+            <div id="project">
                 <h2>LIBRARY SYSTEM BUILT IN JAVA USING FILE SYSTEM | Github Source</h2>
                 <p style="font-style:italic">Jul 2014</p>
                 <p>
@@ -183,7 +189,7 @@
                 </p>
             </div>
 
-            <div id="divBgWhite" style="background-color:#f2f2f2">
+            <div id="divBgWhite">
                 <table>
                     <tr>
                         <td>
@@ -223,7 +229,7 @@
 
             </div>
 
-            <div id="divBgWhite" style="background-color:#e6e6e6">
+            <div id="divBgWhite">
                 <table>
                     <tr>
                         <td>
@@ -242,7 +248,7 @@
                 <p><a href="http://intraweb.stockton.edu/eyos/page.cfm?siteID=209&pageID=24" target="_blank" class="normal_link">Stockton University's School of Business Dean's List</a></p>
             </div>
 
-            <div id="divBgWhite" style="background-color:#d9d9d9">
+            <div id="divBgWhite">
                 <table>
                     <tr>
                         <td>
@@ -257,7 +263,7 @@
                 <p><a href="http://www.computer.org/" target="_blank" class="normal_link">IEEE Computer Society</a></p>
             </div>
 
-            <div id="divBgWhite" style="background-color:#cccccc">
+            <div id="divBgWhite">
                 <table>
                     <tr>
                         <td>
@@ -281,7 +287,7 @@
                 </ul>
             </div>
 
-            <div id="divBgWhite" style="background-color:#bfbfbf">
+            <div id="divBgWhite">
                 <table>
                     <tr>
                         <td>
