@@ -1,0 +1,783 @@
+
+/* ------------- General ------------- */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic);
+@font-face {
+	font-family: "cs-ctrl-basic";
+	src: url("cs-ctrl-basic.eot");
+	src: url("cs-ctrl-basic.eot#iefix") format("embedded-opentype"),
+			url("cs-ctrl-basic.woff") format("woff"),
+			url("cs-ctrl-basic.ttf") format("truetype"),
+			url("cs-ctrl-basic.svg#basic") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.csslider5 {
+  display: inline-block;
+  position: relative;
+  max-width: 320px;
+  
+  
+
+  width: 100%;
+}
+.csslider5,
+.csslider5 *,
+.csslider5 *:after,
+.csslider5 *:before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.csslider5 > .cs_anchor {
+  display: none;
+}
+.csslider5 > ul {
+  position: relative;
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0;
+  
+  overflow: hidden;
+  white-space: nowrap;
+}
+.csslider5 > ul > .cs_skeleton {
+  width: 100%;
+  visibility: hidden;
+  font-size: 0px;
+  line-height: 0;
+}
+
+.csslider5 > ul > .slide.img img {
+  width: 100%;
+}
+
+
+
+.csslider5 > ul > .slide.img a {
+  font-size: 0pt;
+  color: transparent;
+}
+.csslider5 > ul > .slide {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  font-size: initial;
+  line-height: normal;
+  white-space: normal;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.csslider5 .cs_engine{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  font-size: 0pt;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.csslider5 > ul > li.img,
+.csslider5 > .cs_arrowprev,
+.csslider5 > .cs_arrownext,
+.csslider5 > .cs_bullets,
+.csslider5 > .cs_play_pause {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* ------------- /General Styles ------------- */
+
+/* ------------- General Arrows ------------- */
+.csslider5 > .cs_arrowprev,
+.csslider5 > .cs_arrownext {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.csslider5 > .cs_arrowprev > label,
+.csslider5 > .cs_arrownext > label {
+  position: absolute;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0;
+  z-index: -1;
+}
+.csslider5 > .cs_arrowprev {
+  left: 0;
+}
+.csslider5 > .cs_arrownext {
+  right: 0;
+}
+
+.csslider5 > .slide:checked ~ .cs_arrowprev > label,
+.csslider5 > .slide:checked ~ .cs_arrownext > label {
+  opacity: 0;
+  z-index: -1;
+}
+
+
+
+.csslider5 > #cs_slide5_0:checked ~ .cs_arrowprev > label.num2,
+.csslider5 > #cs_pause5_0:checked ~ .cs_arrowprev > label.num2,
+.csslider5 > #cs_slide5_0:checked ~ .cs_arrownext > label.num1,
+.csslider5 > #cs_pause5_0:checked ~ .cs_arrownext > label.num1, 
+.csslider5 > #cs_slide5_1:checked ~ .cs_arrowprev > label.num0,
+.csslider5 > #cs_pause5_1:checked ~ .cs_arrowprev > label.num0,
+.csslider5 > #cs_slide5_1:checked ~ .cs_arrownext > label.num2,
+.csslider5 > #cs_pause5_1:checked ~ .cs_arrownext > label.num2, 
+.csslider5 > #cs_slide5_2:checked ~ .cs_arrowprev > label.num1,
+.csslider5 > #cs_pause5_2:checked ~ .cs_arrowprev > label.num1,
+.csslider5 > #cs_slide5_2:checked ~ .cs_arrownext > label.num0,
+.csslider5 > #cs_pause5_2:checked ~ .cs_arrownext > label.num0 {
+  opacity: 1;
+  z-index: 5;
+}
+
+
+@-webkit-keyframes arrow5 {
+  0%, 33.32333333333334% { opacity: 1; z-index: 5; }
+  33.333333333333336%, 100%  { opacity: 0; z-index: -1; }
+}
+@keyframes arrow5 {
+  0%, 33.32333333333334% { opacity: 1; z-index: 5; }
+  33.333333333333336%, 100%  { opacity: 0; z-index: -1; }
+}
+
+
+.csslider5 > #cs_play5:checked ~ .cs_arrowprev > label.num2,
+.csslider5 > #cs_play5:checked ~ .cs_arrownext > label.num1 {
+  -webkit-animation: arrow5 24000ms infinite -2000ms;
+  animation: arrow5 24000ms infinite -2000ms;
+}
+.csslider5 > #cs_play5:checked ~ .cs_arrowprev > label.num0,
+.csslider5 > #cs_play5:checked ~ .cs_arrownext > label.num2 {
+  -webkit-animation: arrow5 24000ms infinite 6000ms;
+  animation: arrow5 24000ms infinite 6000ms;
+}
+.csslider5 > #cs_play5:checked ~ .cs_arrowprev > label.num1,
+.csslider5 > #cs_play5:checked ~ .cs_arrownext > label.num0 {
+  -webkit-animation: arrow5 24000ms infinite 14000ms;
+  animation: arrow5 24000ms infinite 14000ms;
+}
+
+
+.csslider5 > .slide:checked ~ .cs_arrowprev > label,
+.csslider5 > .slide:checked ~ .cs_arrownext > label,
+.csslider5 > .pause:checked ~ .cs_arrowprev > label,
+.csslider5 > .pause:checked ~ .cs_arrownext > label {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+/* ------------- /General Arrows ------------- */
+
+/* ------------- General Bullets ------------- */
+.csslider5 > .cs_bullets {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  font-size: 0;
+  line-height: 8pt;
+  text-align: center;
+}
+.csslider5 > .cs_bullets > div {
+  margin-left: -50%;
+  width: 100%;
+}
+.csslider5 > .cs_bullets > label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.csslider5 > .cs_bullets > label > .cs_thumb {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  line-height: 0;
+  left: -25.5px;
+  top: -48px;
+}
+.csslider5 > .cs_bullets > label > .cs_thumb > img {
+  max-width: none;
+}
+/* ------------- /General Bullets ------------- */
+
+/* ------------- General Play Pause ------------- */
+.csslider5 > .cs_play_pause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+}
+.csslider5 > .cs_play_pause > label {
+  position: absolute;
+  cursor: pointer;
+}
+.csslider5 > #cs_play5:checked ~ .cs_play_pause > .cs_pause,
+.csslider5 > .slide:checked ~ .cs_play_pause > .cs_play,
+.csslider5 > .pause:checked ~ .cs_play_pause > .cs_play {
+  display: block;
+  z-index: 5;
+}
+.csslider5 > #cs_play5:checked ~ .cs_play_pause > .cs_play,
+.csslider5 > .slide:checked ~ .cs_play_pause > .cs_pause,
+.csslider5 > .pause:checked ~ .cs_play_pause > .cs_pause {
+  display: none;
+  z-index: -1;
+}
+
+
+
+@-webkit-keyframes pauseChange5 {
+  0%, 33.32333333333334% { opacity: 1; z-index: 5; }
+  33.333333333333336%, 100%  { opacity: 0; z-index: -1; }
+}
+@keyframes pauseChange5 {
+  0%, 33.32333333333334% { opacity: 1; z-index: 5; }
+  33.333333333333336%, 100%  { opacity: 0; z-index: -1; }
+}
+
+
+.csslider5 > #cs_play5:checked ~ .cs_play_pause > .cs_pause.num0 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange5 24000ms infinite -2000ms;
+  animation: pauseChange5 24000ms infinite -2000ms;
+}
+.csslider5 > #cs_play5:checked ~ .cs_play_pause > .cs_pause.num1 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange5 24000ms infinite 6000ms;
+  animation: pauseChange5 24000ms infinite 6000ms;
+}
+.csslider5 > #cs_play5:checked ~ .cs_play_pause > .cs_pause.num2 {
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: pauseChange5 24000ms infinite 14000ms;
+  animation: pauseChange5 24000ms infinite 14000ms;
+}
+
+
+.csslider5 > .slide:checked ~ .cs_play_pause > .cs_pause,
+.csslider5 > .pause:checked ~ .cs_play_pause > .cs_pause {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+/* ------------- /General Play Pause ------------- */
+
+/* ------------- General Gestures ------------- */
+.csslider5.cs_handle {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAABwSURBVEjH7ZJBEsAgCAMT/v/n9NCOSqe2oD2yNx1JggB4BCEFWyFASP2KMQE7ywWhe/tTRGCGogLk02tFctiW/SUgaMyQG4PdPzDn31rQbMb8FiAXgvsEJNax1yVlVGAjA93apP3HFhZTGIqiKH7iADB6HxPlHdNVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE0LTA3LTA3VDEzOjQ5OjEwKzAyOjAwm7WiFAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wNy0wN1QxMzo0OToxMCswMjowMOroGqgAAAAASUVORK5CYII="), move;
+}
+.csslider5.cs_handle.cs_grab {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAABaSURBVEjH7ZMxCkAhDEOT8u9/5TpJ+xWkFse8IYutJgEB8RCHL1qCc90BEFnT6QH7mwgFHBUf8wJyS1TDLuc3vmighx37LZdIth3E5hKj9n6O0HRh+oJCiFcMxRUUDxR1CTMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTQtMDctMDdUMTM6NDk6MzgrMDI6MDDqf+sOAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE0LTA3LTA3VDEzOjQ5OjM4KzAyOjAwmyJTsgAAAABJRU5ErkJggg=="), move;
+}
+
+
+.csslider5 .cs_gestures {
+  visibility: hidden;
+  position: absolute;
+  font-size: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+
+  -webkit-transition: visibility .3s linear, opacity .3s linear;
+  transition: visibility .3s linear, opacity .3s linear;
+}
+.csslider5 .cs_gestures.cs_show {
+  visibility: visible;
+  opacity: 1;
+}
+.csslider5 .cs_gestures.cs_show img {
+  width: 33.333333333333336%;
+}
+.csslider5 .cs_gestures.cs_show .cs_first_img {
+  position: absolute;
+  left: -33.333333333333336%;
+  top: 0;
+}
+.csslider5 .cs_gestures.cs_show .cs_last_img {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.csslider5 .cs_gestures > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300%;
+}
+/* ------------- /General Gestures ------------- */
+
+/* ------------- Effect ------------- */
+.csslider5 > ul > .slide.num0 {
+  left: 0%;
+}
+.csslider5 > ul > .slide.num1 {
+  left: 100%;
+}
+.csslider5 > ul > .slide.num2 {
+  left: 200%;
+}
+ 
+
+
+.csslider5 > #cs_slide5_0:checked ~ ul > .slide,
+.csslider5 > #cs_pause5_0:checked ~ ul > .slide {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+.csslider5 > #cs_slide5_1:checked ~ ul > .slide,
+.csslider5 > #cs_pause5_1:checked ~ ul > .slide {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.csslider5 > #cs_slide5_2:checked ~ ul > .slide,
+.csslider5 > #cs_pause5_2:checked ~ ul > .slide {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+ 
+
+
+.csslider5 > ul > .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  opacity: 1;
+
+  -webkit-transition: -webkit-transform 2000ms;
+  transition: -webkit-transform 2000ms, transform 2000ms;
+
+  
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+
+@-webkit-keyframes slide5 {
+  0%, 25%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  33.333333333333336%, 58.333333333333336%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  66.66666666666667%, 91.66666666666667%  { -webkit-transform: translateX(-200%); transform: translateX(-200%); }
+  
+}
+@keyframes slide5 {
+  0%, 25%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  33.333333333333336%, 58.333333333333336%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  66.66666666666667%, 91.66666666666667%  { -webkit-transform: translateX(-200%); transform: translateX(-200%); }
+  
+}
+
+@-webkit-keyframes slide5-ie {
+  0%, 25%  { margin-left: 0%; }
+  33.333333333333336%, 58.333333333333336%  { margin-left: -100%; }
+  66.66666666666667%, 91.66666666666667%  { margin-left: -200%; }
+  
+}
+@keyframes slide5-ie {
+  0%, 25%  { margin-left: 0%; }
+  33.333333333333336%, 58.333333333333336%  { margin-left: -100%; }
+  66.66666666666667%, 91.66666666666667%  { margin-left: -200%; }
+  
+}
+
+.csslider5  > #cs_play5:checked ~ ul > .slide {
+  
+  -webkit-animation: slide5 24000ms infinite;
+  animation: slide5 24000ms infinite;
+  
+}
+/* IE 10+ hack - cant animate translate :( */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .csslider5  > #cs_play5:checked ~ ul > .slide {
+    animation: slide5-ie 24000ms infinite;
+  }
+}
+
+
+.csslider5 > #cs_play5:checked ~ ul > .slide,
+.csslider5 > .pause:checked ~ ul > .slide {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+/* ------------- /Effect ------------- */
+
+/* ------------- Template Show on hover ------------- */
+.csslider5 > .cs_play_pause {
+  -webkit-transition: .4s all 0s ease;
+  transition: .4s all 0s ease;
+}
+.csslider5 > .cs_arrowprev {
+  -webkit-transition: .4s all .15s ease;
+  transition: .4s all .15s ease;
+}
+.csslider5 > .cs_arrownext {
+  -webkit-transition: .4s all .3s ease;
+  transition: .4s all .3s ease;
+}
+.csslider5 > .cs_arrowprev,
+.csslider5 > .cs_arrownext,
+.csslider5 > .cs_play_pause {
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+.csslider5:hover > .cs_arrowprev,
+.csslider5:hover > .cs_arrownext,
+.csslider5:hover > .cs_play_pause {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+/* ------------- /Template Show on hover ------------- */
+
+/* ------------- Template Arrows ------------- */
+.csslider5 > .cs_arrowprev > label,
+.csslider5 > .cs_arrownext > label {
+  padding: 17px;
+  height: 23px;
+  width: 23px;
+  margin-top: -28px;
+  margin-left: -28px;
+
+  background-color: #849AC4;
+
+  border-radius: 50%;
+}
+.csslider5 > .cs_arrowprev > label,
+.csslider5 > .cs_arrownext > label,
+.csslider5 > .cs_arrowprev > label span:after,
+.csslider5 > .cs_arrownext > label span:after {
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+.csslider5 > .cs_arrowprev {
+  margin-left: 2px;
+  left: 45px;
+}
+.csslider5 > .cs_arrownext {
+  margin-right: 2px;
+  right: 45px;
+}
+.csslider5 > .cs_arrowprev > label span,
+.csslider5 > .cs_arrownext > label span {
+  display: block;
+  color: #3A4A5A;
+}
+.csslider5 > .cs_arrowprev > label span:after,
+.csslider5 > .cs_arrownext > label span:after {
+  display: block;
+  font: 21px "cs-ctrl-basic";
+  line-height: 23px;
+  text-align: center;
+}
+/* IE10+ hack */
+_:-ms-input-placeholder, :root .csslider5 > .cs_arrowprev > label span:after {
+  line-height: 29px;
+}
+_:-ms-input-placeholder, :root .csslider5 > .cs_arrownext > label span:after {
+  line-height: 29px;
+}
+
+.csslider5 > .cs_arrowprev > label span:after {
+  content: '\e800';
+}
+.csslider5 > .cs_arrownext > label span:after {
+  content: '\e801';
+}
+
+.csslider5 > .cs_arrowprev:hover > label,
+.csslider5 > .cs_arrownext:hover > label {
+  background-color: #c2cde2;
+}
+
+.csslider5 > .cs_arrownext:hover > label span {
+  color: #000;
+  -webkit-animation: nextArrow5 .7s infinite ease-in-out;
+  animation: nextArrow5 .7s infinite ease-in-out;
+}
+.csslider5 > .cs_arrowprev:hover > label span {
+  color: #000;
+  -webkit-animation: prevArrow5 .7s infinite ease-in-out;
+  animation: prevArrow5 .7s infinite ease-in-out;
+}
+
+
+@keyframes nextArrow5 {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  75% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+}
+@-webkit-keyframes nextArrow5 {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  75% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+}
+
+@-webkit-keyframes prevArrow5 {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  75% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+}
+@keyframes prevArrow5 {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  75% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+}
+/* ------------- /Template Arrows ------------- */
+
+/* ------------- Template Play Pause ------------- */
+.csslider5 > .cs_play_pause > label{
+  text-decoration: none;
+  padding: 17px;
+  height: 23px;
+  width: 23px;
+
+  margin-top: -28px;
+  margin-left: -28px;
+
+  background-color: #849AC4;
+
+  border-radius: 50%;
+}
+.csslider5 > .cs_play_pause > label,
+.csslider5 > .cs_play_pause > label span:after {
+  -webkit-transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.csslider5 > .cs_play_pause > label span {
+  display: block;
+  color: #3A4A5A;
+}
+.csslider5 > .cs_play_pause > label span:after{
+  display: block;
+  font: 15px "cs-ctrl-basic";
+  line-height: 25px;
+  text-align: center;
+}
+/* IE10+ hack */
+_:-ms-input-placeholder, :root .csslider5 > .cs_play_pause > label span:after {
+  line-height: 28px;
+}
+.csslider5 > .cs_play_pause > .cs_play span:after {
+  content: '\e802';
+}
+.csslider5 > .cs_play_pause > .cs_pause span:after {
+  content: '\e803';
+}
+
+.csslider5 > .cs_play_pause:hover > label {
+  background-color: #c2cde2;
+}
+.csslider5 > .cs_play_pause:hover > label span {
+  color: #000;
+  -wibkit-animation: playPause5 .7s infinite ease-in-out;
+  animation: playPause5 .7s infinite ease-in-out;
+}
+
+@-webkit-keyframes playPause5 {
+  0%, 100% { -webkit-transform: translateY(0px); transform: translateY(0px); }
+  25% { -webkit-transform: translateY(2px); transform: translateY(2px); }
+  75% { -webkit-transform: translateY(-2px); transform: translateY(-2px); }
+}
+@keyframes playPause5 {
+  0%, 100% { -webkit-transform: translateY(0px); transform: translateY(0px); }
+  25% { -webkit-transform: translateY(2px); transform: translateY(2px); }
+  75% { -webkit-transform: translateY(-2px); transform: translateY(-2px); }
+}
+/* ------------- /Template Play Pause ------------- */
+
+/* ------------- Template Bullets ------------- */
+.csslider5 > .cs_bullets {
+  bottom: 5px;
+  margin-bottom: 5px;
+}
+.csslider5 > .cs_bullets > label {
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 9px;
+  background: #849AC4;
+}
+
+
+.csslider5 > .cs_bullets > label > .cs_thumb {
+  border: 3px solid #849AC4;
+  margin-top: -150%;
+  margin-left: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.csslider5 > .cs_bullets > label > .cs_thumb:before {
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  left: 50%;
+  margin-left: -4px;
+  bottom: -9px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  
+  border-top: 7px solid #849AC4;
+}
+.csslider5 > .cs_bullets > label:hover > .cs_thumb {
+  margin-top: -12px;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.csslider5 > .cs_bullets > label > .cs_point {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -2px;
+  background: transparent;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.csslider5 > .cs_bullets > label:hover > .cs_point,
+
+.csslider5 > #cs_slide5_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider5 > #cs_pause5_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider5 > #cs_slide5_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider5 > #cs_pause5_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider5 > #cs_slide5_2:checked ~ .cs_bullets > label.num2 > .cs_point,
+.csslider5 > #cs_pause5_2:checked ~ .cs_bullets > label.num2 > .cs_point {
+  background: #3A4A5A;
+}
+
+
+
+
+@keyframes bullet5 {
+  0%, 33.32333333333334%  { background: #3A4A5A; }
+  33.333333333333336%, 100% { background: transparent; }
+}
+@-webkit-keyframes bullet5 {
+  0%, 33.32333333333334%  { background: #3A4A5A; }
+  33.333333333333336%, 100% { background: transparent; }
+}
+
+.csslider5 > #cs_play5:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider5 > #cs_pause5:checked ~ .cs_bullets > label.num0 > .cs_point {
+  -webkit-animation: bullet5 24000ms infinite -2000ms;
+  animation: bullet5 24000ms infinite -2000ms;
+}
+.csslider5 > #cs_play5:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider5 > #cs_pause5:checked ~ .cs_bullets > label.num1 > .cs_point {
+  -webkit-animation: bullet5 24000ms infinite 6000ms;
+  animation: bullet5 24000ms infinite 6000ms;
+}
+.csslider5 > #cs_play5:checked ~ .cs_bullets > label.num2 > .cs_point,
+.csslider5 > #cs_pause5:checked ~ .cs_bullets > label.num2 > .cs_point {
+  -webkit-animation: bullet5 24000ms infinite 14000ms;
+  animation: bullet5 24000ms infinite 14000ms;
+}
+
+
+
+.csslider5 > #cs_play5:checked ~ .cs_bullets > label > .cs_point,
+.csslider5 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+.csslider5 > .slide:checked ~ .cs_bullets > label > .cs_point,
+.csslider5 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+/* ------------- Template /Bullets ------------- */
+/* hide description & bullets on mobile devices */
+@media
+only screen and (max-width: 480px),
+only screen and (-webkit-max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (   max--moz-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (     -o-max-device-pixel-ratio: 2/1)    and (max-width: 480px),
+only screen and (        max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (                max-resolution: 192dpi) and (max-width: 480px),
+only screen and (                max-resolution: 2dppx)  and (max-width: 480px) { 
+  .csslider5 > .cs_description,
+  .csslider5 > .cs_bullets {
+    display: none;
+  }
+}
