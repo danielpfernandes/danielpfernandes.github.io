@@ -201,7 +201,7 @@ a.normal_link {
 
 @media screen and (max-width: 826px) {
     p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     h1 {
@@ -214,11 +214,11 @@ a.normal_link {
     }
 
     h3 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     li {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .horizontalNav {
