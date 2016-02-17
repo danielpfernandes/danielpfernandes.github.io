@@ -1,4 +1,130 @@
-﻿
+﻿body {
+    background-color: lightgrey;
+    margin: 0;
+}
+
+footer {
+    background-color: #5C5A6F;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Droid Serif', serif;
+
+}
+
+h2 {
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#title {
+    background-color: #234178;
+    padding: 50px;
+    margin: 0;
+}
+
+#section_summary {
+    background-color: white;
+    border-radius: 10px;
+    border-spacing: 0;
+    box-shadow: 2px 2px 10px #808080;
+    padding-right: 30px;
+    margin: 50px auto 50px auto;
+    max-width: 800px;
+    line-height: 150%;
+}
+
+#section_projects {
+    background-color: #849AC4;
+    padding: 30px;
+    margin: 50px auto 50px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    border-spacing: 0;
+    box-shadow: 2px 2px 10px #808080;
+    line-height: 150%;
+}
+
+#section_resume {
+    background-color: #849AC4;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #808080;
+    padding: 30px;
+    margin: 50px auto 50px auto;
+    max-width: 800px;
+}
+
+#project {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 10px #808080;
+}
+
+#divBgWhite {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 10px #808080;
+}
+
+
+#regular_list {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#courseware_wrapper {
+    line-height: 100%;
+}
+
+.horizontalNav li {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    vertical-align: central;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.horizontalNav a:link {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.horizontalNav a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.horizontalNav a:active {
+    color: gray;
+    background-color: dimgray;
+    text-decoration: none;
+}
+
+.horizontalNav a:hover {
+    color: white;
+    background-color: #38568C;
+    text-decoration: none;
+}
+
+a.normal_link {
+    color: black;
+    text-decoration: none;
+}
+
 /* As hex codes */
 
 .color-primary-0 {
@@ -61,7 +187,6 @@
     color: #8B8E0C;
 }
 
-
 .horizontalNav {
     margin: 0;
     background-color: #000000;
@@ -74,125 +199,28 @@
     z-index: 9999;
 }
 
-body {
-    background-color: lightgrey;
-    margin: 0;
-}
-
-#title {
-    background-color: #234178;
-    padding: 50px;
-    margin: 0;
-}
-
-#section_summary {
-    background-color: white;
-    border-radius: 20px;
-    border-spacing: 0;
-    box-shadow: 2px 2px 10px #AAC7AA;
-    padding-right: 30px;
-    margin: 50px;
-}
-
-#section_projects {
-    background-color: #849AC4;
-    padding: 30px;
-    margin: 50px;
-    border-radius: 20px;
-    border-spacing: 0;
-    box-shadow: 2px 2px 10px #808080;
-}
-
-#section_resume {
-    background-color: #849AC4;
-    border-radius: 20px;
-    box-shadow: 2px 2px 10px #808080;
-    padding: 30px;
-    margin: 50px;
-}
-
-#project {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 40px;
-    box-shadow: 2px 2px 10px #808080;
-    /*border-radius: 20px;*/
-}
-
-#divBgWhite {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 40px;
-    /*border-radius: 20px;*/
-    box-shadow: 2px 2px 10px #808080;
-}
-
-h1 {
-    font-size: x-large;
-    font-family: 'Slabo 27px', serif;
-}
-
-h2 {
-    font-size: larger;
-    font-family: 'Roboto', sans-serif;
-}
-
-p {
-    font-size: medium;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.horizontalNav li {
-    display: inline-block;
-    margin: 0;
-    padding: 10px 0 10px 0;
-    vertical-align: central;
-    list-style: none;
-    font-family: 'Roboto', sans-serif;
-}
-
-.horizontalNav a:link {
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-}
-
-.horizontalNav a:visited {
-    color: white;
-    text-decoration: none;
-}
-
-.horizontalNav a:active {
-    color: gray;
-    background-color: dimgray;
-    text-decoration: none;
-}
-
-.horizontalNav a:hover {
-    color: white;
-    background-color: #38568C;
-    text-decoration: none;
-}
-
-#regular_list {
-    font-family: 'Open Sans', sans-serif;
-}
-
-a.normal_link {
-    color: black;
-    text-decoration: none;
-}
-
-footer {
-    background-color: #5C5A6F;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding: 15px;
-}
-
-
 @media screen and (max-width: 826px) {
+    p {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height:120%
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 12px;
+    }
+
+    li {
+        font-size: 12px;
+    }
+
     .horizontalNav {
         margin: 0;
         background-color: #000000;
@@ -204,17 +232,18 @@ footer {
         box-shadow: 2px 2px 10px #000000;
         z-index: 9999;
     }
-    
-    .horizontalNav li {
-    display: inline-block;
-    margin: 0;
-    padding: 10px 0 10px 0;
-    vertical-align: central;
-    float: right;
-    list-style: none;
-    font-family: 'Roboto', sans-serif;
-    }
-    
+
+        .horizontalNav li {
+            display: inline-block;
+            margin: 0;
+            padding: 10px 0 10px 0;
+            vertical-align: central;
+            float: right;
+            list-style: none;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 12px;
+        }
+
     #title {
         background-color: #234178;
         padding: 30px;
