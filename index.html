@@ -9,10 +9,16 @@
   <meta name="keywords" content="portfolio, developer, cybersecurity, tester" />
   <meta name="referrer" content="origin">
   
-  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com/*; img-src https://*; child-src 'none';">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains" />
+  <meta 
+        http-equiv="Content-Security-Policy" 
+        content="
+                 default-src 'self';
+                 style-src https://fonts.googleapis.com/
+                 style-src-elem 'self' https://fonts.googleapis.com/;
+                 img-src https://*; 
+                 child-src 'none'; " />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   
   <meta property="og:title" content="Daniel P Fernandes | FullStack Developer"/>
   <meta property="og:description" content="Professional Software Developer Portfolio" />
